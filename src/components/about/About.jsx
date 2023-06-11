@@ -1,60 +1,17 @@
 import React from 'react'
 import './about.css'
-import moi from '../../assets/changerone.jpg'
-import {FaAward} from 'react-icons/fa'
-import {FiUsers} from 'react-icons/fi'
-import {VscFolderLibrary} from 'react-icons/vsc'
+import { Footer } from '../footer/Footer'
 
-const About = () => {
-    return (
-      <section id="about">
-        <h5>Get to know</h5>
-        <h2>About me</h2>
-        <div className="container about__container">
-          <div className="about__me">
-            <div className="about__me__image">
-              <img src={moi} alt="Brown " />
-            </div>
-          </div>
-          <div className="about__me__content">
-            <div className="about__cards">
-              <article className="about__card">
-                <FaAward className="about__icon" />
-                <h5>Experience</h5>
-                <small>1+ Years</small>
-              </article>
-              <article className="about__card">
-                <FiUsers className="about__icon" />
-                <h5>Clients</h5>
-                <small>3 world widely</small>
-              </article>
-              <article className="about__card">
-                <VscFolderLibrary className="about__icon" />
-                <h5>Projects</h5>
-                <small>2 Completed</small>
-              </article>
-            </div>
-            <p>
-              I am a young software engineer trained at the Faculty of
-              Engineering and Technology(FET) of the University of Buea . I get
-              my B.eng in 2021. Being on demand for experience, I apply to
-              Camsol.io which accepts me and gives me the chance to work on real
-              business projects in order to gain experience. From July 2021 to
-              today, I learned technologies such as react, react native, in
-              short the MERN stack, I am still learning and counting on the
-              support of Camsol to increase my knowledge at end of being an
-              engineer not only graduate, but also qualified. I hold a
-              French-speaking baccalaureate D sexion, my university studies at
-              FET I did in English. I can therefore express myself in French and
-              in English (average).
-            </p>
-            <a href="#contact" className="btn btn-primary">
-              Let's talk
-            </a>
-          </div>
-        </div>
-      </section>
-    );
+export const About = () => {
+  return (
+    <div className='content'>
+      <h2>Welcome o my portfolio</h2>
+      <p>My name is <span>NJI DOMINION ABIT</span> and I am a  <span>TELECOM ENGINEER.</span><br></br>I am passionate about <span>TECH</span>
+      and I love using my skills to help people overcome their issues with telephone communication and network configuration issues.<br></br> I have one year of experience in TECH, and during this time, I have had the opportunity
+      to work on projects.<br></br> I am always looking for opportunities to grow and I am committed to my job<br></br> In my portfolio you will 
+      find examples of my work...I take pride in delivering high-quality results that meet needs to my clients.</p>
+      <a href="./portfolio"><button>See Portfolio</button></a>
+      <Footer />
+    </div>
+  )
 }
-
-export default About
