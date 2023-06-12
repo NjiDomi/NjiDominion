@@ -1,24 +1,16 @@
 import React from 'react'
 import './navbar.css'
-import {AiOutlineHome} from 'react-icons/ai'
-import {AiOutlineUser} from 'react-icons/ai'
-import {BiBook} from 'react-icons/bi'
-import {RiServiceLine} from 'react-icons/ri'
-import { BiMessageSquareDetail} from 'react-icons/bi'
-import { useState } from 'react'
-
- 
-const Navbar = () => {
-    const [activeNav, setActiveNav] = useState('#')
-    return (
-        <nav>
-            <a href='#' onClick={()=>setActiveNav('#')} className={activeNav==='#'? 'active' : ''}><AiOutlineHome/></a>
-            <a href='#about' onClick={()=>setActiveNav('#about')} className={activeNav==='#about'? 'active' : ''} ><AiOutlineUser/></a>
-            <a href='#experience' onClick={()=>setActiveNav('#experience')} className={activeNav==='#experience'? 'active' : ''}><BiBook/></a>
-            <a href='#service' onClick={()=>setActiveNav('#service')} className={activeNav==='#service'? 'active' : ''}><RiServiceLine/></a>
-            <a href='#contact' onClick={()=>setActiveNav('#contact')} className={activeNav==='#contact'? 'active' : ''}><BiMessageSquareDetail/></a>
-        </nav>
-    )
+import  { NavLink } from 'react-router-dom'
+export const Navbar = () => {
+  return (
+    <nav>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/about'>About</NavLink>
+        <NavLink to='/experience'>Experience</NavLink>
+        <NavLink to='/services'>Services</NavLink>
+        <NavLink to='/portfolio'>Portfolio</NavLink>
+        <NavLink to='/testimonial'>Testimonial</NavLink>
+        <NavLink to='/contact'>Contact</NavLink>
+    </nav>
+  )
 }
-
-export default Navbar
